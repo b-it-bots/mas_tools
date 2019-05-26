@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>mas_tools</name>
+  <version>0.0.1</version>
+  <description>package containing utility functions used for b-it-bots</description>
+
+  <maintainer email="robotics@mail.inf.h-brs.de">MAS Robotics</maintainer>
+
+  <license>GPLv3</license>
+
+  <author email="robotics@mail.inf.h-brs.de">MAS Robotics</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>rospy</depend>
+
+</package>
