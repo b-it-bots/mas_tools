@@ -1,7 +1,7 @@
 import os
 import yaml
 
-ALLOWED_YAML_EXTENSIONS = ['yaml', 'yml']
+ALLOWED_YAML_EXTENSIONS = ['.yaml', '.yml']
 
 def load_yaml_file(yaml_path):
     """Loads the given YAML file and returns the loaded dictionary.
@@ -15,11 +15,10 @@ def load_yaml_file(yaml_path):
     if not os.path.isfile(yaml_path):
         raise OSError('{0} is not a valid file'.format(yaml_path))
 
-    file_name_segments = yaml_path.split('.')
-    file_has_extension = len(file_name_segments) != 1
-    if not file_has_extension:
+    filename, file_extension = os.path.splitext(yaml_path)
+    if not file_extension:
         raise ValueError('Could not determine the file extension of {0}'.format(yaml_path))
-    if file_name_segments[-1] not in ALLOWED_YAML_EXTENSIONS:
+    if file_extension not in ALLOWED_YAML_EXTENSIONS:
         raise ValueError('Only extensions {0} are allowed'.format(ALLOWED_YAML_EXTENSIONS))
 
     file_contents = None
