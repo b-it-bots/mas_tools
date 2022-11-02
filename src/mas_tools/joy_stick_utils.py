@@ -1,10 +1,10 @@
 from enum import IntEnum
 
 
-class MSJS_BUTTONS_MAP(IntEnum):
+class LT_BUTTONS_MAP(IntEnum):
     """
-    Button mappings for the Microsoft (wireless) controller in Linux
-    Should match description @ http://wiki.ros.org/joy#Microsoft_Xbox_360_Wireless_Controller_for_Linux
+    Button mappings for the Logitech Wireless Gamepad F710 as produced by the [`joy`](http://wiki.ros.org/joy)
+    ROS package. Similar mappings to the  Microsoft Xbox 360 Wireless Controller.
     """
     A = 0
     B = 1
@@ -19,10 +19,10 @@ class MSJS_BUTTONS_MAP(IntEnum):
     RIGHT_STICK = 10
 
 
-class MSJS_AXES_MAP(IntEnum):
+class LT_AXES_MAP(IntEnum):
     """
-    Axes mappings for the Microsoft (wireless) controller in Linux
-    (as of 2022-11-02) does not match http://wiki.ros.org/joy#Microsoft_Xbox_360_Wireless_Controller_for_Linux
+    Axes mappings for the Logitech Wireless Gamepad F710 as produced by the [`joy`](http://wiki.ros.org/joy)
+    ROS package.
     """
     STICK_LEFT_LR = 0       # fully left: 1.0, fully right: -1.0
     STICK_LEFT_UD = 1       # fully up: 1.0, fully down: -1.0
