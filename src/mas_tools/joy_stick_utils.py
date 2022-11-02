@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import IntEnum
 
 
-class MSJS_BUTTONS_MAP(Enum):
+class MSJS_BUTTONS_MAP(IntEnum):
     """
     Button mappings for the Microsoft (wireless) controller in Linux
     Should match description @ http://wiki.ros.org/joy#Microsoft_Xbox_360_Wireless_Controller_for_Linux
@@ -19,7 +19,7 @@ class MSJS_BUTTONS_MAP(Enum):
     RIGHT_STICK = 10
 
 
- class MSJS_AXES_MAP(Enum):
+class MSJS_AXES_MAP(IntEnum):
     """
     Axes mappings for the Microsoft (wireless) controller in Linux
     (as of 2022-11-02) does not match http://wiki.ros.org/joy#Microsoft_Xbox_360_Wireless_Controller_for_Linux
