@@ -1,6 +1,20 @@
 import os
 from rospkg import RosPack
+from actionlib_msgs.msg import GoalStatus
 
+
+ACTIONLIB_STATUS_NAMES = {
+    GoalStatus.PENDING:    'PENDING',
+    GoalStatus.ACTIVE:     'ACTIVE',
+    GoalStatus.PREEMPTED:  'PREEMPTED',
+    GoalStatus.SUCCEEDED:  'SUCCEEDED',
+    GoalStatus.ABORTED:    'ABORTED',
+    GoalStatus.REJECTED:   'REJECTED',
+    GoalStatus.PREEMPTING: 'PREEMPTING',
+    GoalStatus.RECALLING:  'RECALLING',
+    GoalStatus.RECALLED:   'RECALLED',
+    GoalStatus.LOST:       'LOST'
+}
 
 
 def get_package_path(package_name, *paths):
